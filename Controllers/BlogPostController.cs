@@ -17,6 +17,20 @@ namespace APIKubernetsAndDocker.Controllers
             _blogPostRepository = blogPostRepository;
         }
 
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
+        [HttpGet("hello")]
+        public IActionResult Hello()
+        {
+            try
+            {
+                return Ok("Olá Mundo!");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [ProducesResponseType(typeof(List<BlogPost>), (int)HttpStatusCode.OK)]
         [HttpGet]
         public async Task<IActionResult> Get()
