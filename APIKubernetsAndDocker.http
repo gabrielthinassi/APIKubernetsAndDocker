@@ -1,0 +1,6 @@
+@APIKubernetsAndDocker_HostAddress = http://localhost:5197
+
+GET {{APIKubernetsAndDocker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
