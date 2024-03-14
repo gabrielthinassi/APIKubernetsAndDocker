@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bielzapipod1
+  labels:
+    app: bielzapipod
+spec:
+  containers:
+    - name: bielzapipod
+      image: bielz/kubeapi:latest
+      ports:
+        - containerPort: 8080
